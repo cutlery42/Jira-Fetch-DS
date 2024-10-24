@@ -17,6 +17,9 @@ app.get('/fetch-aggregated-durations', fetchAggregatedDurations);
 app.get('/fetch-reopened-count', fetchReopenedCount);
 app.get('/fetch-cycle-timeseries', fetchCycleTimeseries);
 app.get('/fetch-bug-cycle-times', fetchBugCycleTimes);
+app.get('/health', (req, res) => {
+  res.status(200).send('Ok');
+})
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
